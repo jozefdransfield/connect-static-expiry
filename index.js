@@ -18,7 +18,7 @@ var crypto = require('crypto')
   , util = require('util')
   , fresh = require('fresh')
   , findit = require('findit')
-  , isDev = process.env.NODE_ENV === 'development'
+  , isDev = process.env.NODE_ENV !== 'production'
   , defaults = {
       unconditional: isDev ? 'none' : 'both',
       duration: 31556900,
